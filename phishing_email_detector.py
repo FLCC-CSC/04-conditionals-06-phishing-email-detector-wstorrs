@@ -1,8 +1,8 @@
 # FILE NAME - phishing_email_detector.py
 
-# NAME: 
-# DATE: 
-# BRIEF DESCRIPTION:  
+# NAME: William Storrs
+# DATE: February 16, 2026
+# BRIEF DESCRIPTION:  Phishing Email Detector Project Lab
 
 
 
@@ -15,13 +15,23 @@
 
 ########## ENTER YER CODE BELOW THIS LINE ##########
 
+subject = input("Enter the email subject line: ")
+subject_lower = subject.lower()
 
+print("\nSECURITY ASSESSMENT:")
 
+if "urgent" in subject_lower or "immediate action required" in subject_lower:
+    risk = "HIGH RISK: Possible phishing attempt."
+elif "win" in subject_lower or "free" in subject_lower:
+    risk = "MEDIUM RISK: Suspicious offer detected."
+elif "password reset" in subject_lower:
+    risk = "LOW RISK: Verify legitimacy with sender."
+else:
+    risk = "No phishing indicators detected."
 
-
-
-
-
+print(risk)
+print("------------------------")
+print(f'Analyzed subject: "{subject}"')
 
 
 ########### END YER CODE ABOVE THIS LINE ###########
@@ -77,9 +87,9 @@ Analyzed subject: "Did you request a password reset?"
 '''
 
 1. Was using `in` difficult or was it natural?
+I did have to google some additional information in regards to "in" for python to gain a better understanding. 
 
-
-
+For the other parts of the lab code, I rely heavily on jupyter notes and previous labs. 
 
 
 
@@ -97,7 +107,7 @@ Analyzed subject: "Did you request a password reset?"
 Please gauge your utilization of AI on the following spectrum. Place an "X" in front
 of the appropriate response. Only choose one of the following:
 
-[ ] I did not use AI at all for this lab.
+[X] I did not use AI at all for this lab.
 [ ] I wrote the initial draft of the software but had AI help me make it better.
 [ ] I fed the lab description to AI and had it generate a response but I modified it.
 [ ] AI created the entire program for me.
@@ -111,7 +121,7 @@ may impede your understanding. Please rate how well you understand the concepts 
 
 [ ] I understand very little about this lab.
 [ ] I am about 50/50 on this lab; I get parts of it but not the whole picture.
-[ ] I pretty much get it.
+[X] I pretty much get it.
 [ ] I'm solid. Totally got it.
 
 '''
